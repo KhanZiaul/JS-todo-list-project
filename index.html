@@ -14,8 +14,6 @@
     <!-- font awesome link -->
 
     <script src="https://kit.fontawesome.com/70a98cd510.js" crossorigin="anonymous"></script>
-
-    <link rel="stylesheet" href="style.css">
 </head>
 <body class="lg:mx-auto bg-purple-500 lg:w-[80%] rounded-xl p-10 mt-10">
 
@@ -25,7 +23,7 @@
         <input type="text" placeholder="search here" class="input input-bordered input-success w-full text-white bg-purple-900"/>
     </div>
     <div>
-        <ul class="text-white">
+        <ul id="list" class="text-white">
             <div class="flex justify-between items-center border-2 p-3 mb-4 rounded-xl lg:w-[75%] mx-auto">
                 <div>
                     <li class="text-xl"> 1 . Home work done</li>
@@ -57,11 +55,13 @@
             </div>
         </ul>
     </div>
-    <div class="mt-5">
-        <h2 class="mb-4 text-center text-white text-3xl font-normal">Add a new todo......</h2>
-        <input type="text" placeholder="Add new todo here" class="input input-bordered bg-purple-900 w-full text-white" />
-    </div>
 
+    <form id="add-form" class="mt-5">
+
+        <h2 class="mb-4 text-center text-white text-3xl font-normal">Add a new todo......</h2>
+
+        <input name="add" type="text" placeholder="Add new todo here" class="input input-bordered bg-purple-900 w-full text-white" />
+</form>
     <script src="app.js"></script>
 </body>
 </html>
