@@ -1,6 +1,8 @@
 const addForm = document.getElementById('add-form');
 
-let i = 4;
+// add item
+
+let i = 1;
 
 addForm.addEventListener('submit', e => {
 
@@ -18,7 +20,7 @@ addForm.addEventListener('submit', e => {
 
     <span class="block">${i} . ${todo}</span>
 
-    <i class="fa-solid fa-trash block cursor-pointer"></i>
+    <i class="fa-solid fa-trash block cursor-pointer delete"></i>
 
     </li>
 
@@ -35,3 +37,16 @@ addForm.addEventListener('submit', e => {
 
     i++;
 })
+
+// delete items
+
+document.getElementById('list').addEventListener('click', e => {
+
+    if(e.target.classList.contains('delete')){
+
+        e.target.parentNode.parentNode.remove();
+
+        i--;
+        
+    };
+});
