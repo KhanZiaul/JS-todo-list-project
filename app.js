@@ -1,5 +1,7 @@
 const addForm = document.getElementById('add-form');
 
+const search = document.getElementById('search');
+
 // add item
 
 let i = 1;
@@ -12,7 +14,7 @@ addForm.addEventListener('submit', e => {
 
     const list = document.getElementById('list');
 
-    const item = document.createElement('div');
+    const item = document.createElement('li');
 
     item.innerHTML = `
 
@@ -48,4 +50,41 @@ document.getElementById('list').addEventListener('click', e => {
 
         i--;
     };
+});
+
+// search
+
+const filterTodos = function(term){
+
+    const todos = document.getElementById('list');
+
+    Array.from(todos.children)
+
+    .filter(function(todo){
+
+        return !todo.textContent.includes(term);
+    })
+    .forEach(function(todo){
+        
+        todo.classList.add('hidden');
+    })
+
+    Array.from(todos.children)
+
+    .filter(function(todo){
+
+        return todo.textContent.includes(term);
+    })
+    .forEach(function(todo){
+        
+        todo.classList.remove('hidden');
+    })
+}
+
+
+search.addEventListener('keyup',function(){
+
+    const term = search.searchHere.value.trim();
+
+    filterTodos(term);
 });
