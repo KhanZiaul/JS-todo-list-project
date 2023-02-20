@@ -47,6 +47,5 @@ document.getElementById('list').addEventListener('click', e => {
         e.target.parentNode.parentNode.remove();
 
         i--;
-        
     };
 });

@@ -15,26 +15,45 @@
 
     <script src="https://kit.fontawesome.com/70a98cd510.js" crossorigin="anonymous"></script>
 </head>
-<body class="lg:mx-auto bg-purple-500 lg:w-[80%] rounded-xl p-10 mt-10">
+<body>
 
-    <h2 class="text-white text-6xl font-extrabold text-center mb-4">Todo List</h2>
+    <div class="lg:mx-auto bg-purple-500 lg:w-[80%] rounded-xl p-10 mt-10">
 
-    <div class="mt-5 mb-5">
+    <header>
+
+        <!-- header text -->
+
+        <h2 class="text-white text-6xl font-extrabold text-center mb-4">Todo List</h2>
+
+    </header>
+
+    <main>   
+        <!-- search form  -->
+
+    <form class="mt-5 mb-5">
+
         <input type="text" placeholder="search here" class="input input-bordered input-success w-full text-white bg-purple-900"/>
-    </div>
 
-        <ul id="list" class="text-white list-none">
+    </form>
 
-        </ul>
+        <!-- todos list  -->
 
+    <ul id="list" class="text-white list-none">
 
+    </ul>
+
+        <!-- delete todo -->
 
     <form id="add-form" class="mt-5">
 
         <h2 class="mb-4 text-center text-white text-3xl font-normal">Add a new todo......</h2>
 
         <input name="add" type="text" placeholder="Add new todo here" class="input input-bordered bg-purple-900 w-full text-white" />
-</form>
+    </form>
+
+     </div>
+  </main>
+
     <script src="app.js"></script>
 </body>
 </html>
